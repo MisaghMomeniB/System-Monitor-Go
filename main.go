@@ -13,3 +13,5 @@ import (
 	"github.com/shirou/gopsutil/v3/disk"
 	"github.com/shirou/gopsutil/v3/mem"
 )
+
+// SystemStats holds the data for system usage
