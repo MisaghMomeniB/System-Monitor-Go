@@ -57,3 +57,21 @@ func getSystemStats() (SystemStats, error) {
 		DiskUsage:   formatBytes(diskStats.Used),
 	}, nil
 }
+
+// statsHandler provides system stats as a JSON response
+func statsHandler(w http.ResponseWriter, r *http.Request) {
+	stats, err := getSystemStats()
+	if err != nil {
+		http.Error(w, "Could not retrieve system stats", http.StatusInternalServerError)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(stats)
+}
+
+func main() {
+	http.HandleFunc("/stats", statsHandler)
+	fmt.Println("Server is running on http://localhost:8080/stats")
+	http.ListenAndServe(":8080", nil)
+}
