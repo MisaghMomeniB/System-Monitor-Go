@@ -34,3 +34,26 @@ func formatBytes(bytes uint64) string {
 	pre := "KMGTPE"[exp : exp+1]
 	return fmt.Sprintf("%.2f %sB", float64(bytes)/float64(uint64(unit)<<exp*10), pre)
 }
+
+// getSystemStats collects CPU, memory, and disk statistics
+func getSystemStats() (SystemStats, error) {
+	cpuPercent, err := cpu.Percent(time.Second, false)
+	if err != nil {
+		return SystemStats{}, err
+	}
+
+	memStats, err := mem.VirtualMemory()
+	if err != nil {
+		return SystemStats{}, err
+	}
+	diskStats, err := disk.Usage("/")
+	if err != nil {
+		return SystemStats{}, err
+	}
+
+	return SystemStats{
+		CPUUsage:    cpuPercent[0],
+		MemoryUsage: formatBytes(memStats.Used),
+		DiskUsage:   formatBytes(diskStats.Used),
+	}, nil
+}
