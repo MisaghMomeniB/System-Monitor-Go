@@ -15,3 +15,8 @@ import (
 )
 
 // SystemStats holds the data for system usage
+type SystemStats struct {
+	CPUUsage    float64 `json:"cpu_usage"`
+	MemoryUsage string  `json:"memory_usage"`
+	DiskUsage   string  `json:"disk_usage"`
+}
