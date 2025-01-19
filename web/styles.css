@@ -197,4 +197,57 @@ body {
 .system-monitor .stats .stat p {
     font-size: 16px;
     color: #bbb;
-}   
+}
+
+/* Styling for the chart container */
+.chart-container {
+    margin-top: 30px;
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    transition: all 0.3s ease-in-out;
+}
+
+.chart-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling for the charts themselves */
+canvas {
+    width: 400px !important;  /* Fix the width */
+    height: 300px !important; /* Fix the height */
+    /* max-width: 400px; */
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+canvas:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Add animations for fading effects */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add subtle animations for the top nav */
+.top-nav:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
