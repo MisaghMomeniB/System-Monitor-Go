@@ -156,3 +156,11 @@ body {
     background-color: #333333;  /* Darken background on hover */
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);  /* Enhanced shadow on hover */
 }
+
+/* Title of the System Monitor */
+.system-monitor h2 {
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
