@@ -5,10 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="./styles.css">
+    <!-- Include Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    
-    <script src="./script.js"></script>
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Nav -->
+        <div class="top-nav">
+            <div class="logo">System Monitor</div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-container">
+            <div class="card">
+                <h3>CPU Usage</h3>
+                <p id="cpu-usage">Loading...</p>
+            </div>
+            <div class="card">
+                <h3>Memory Usage</h3>
+                <p id="memory-usage">Loading...</p>
+            </div>
+            <div class="card">
+                <h3>Disk Usage</h3>
+                <p id="disk-usage">Loading...</p>
+            </div>
+        </div>
+
+        <!-- Chart Container for Real-time Charts -->
+        <div class="chart-container">
+            <h3>Real-time System Stats</h3>
+            <canvas id="cpuChart"></canvas>
+            <canvas id="memoryChart" style="margin-top: 20px;"></canvas>
+            <canvas id="diskChart" style="margin-top: 20px;"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
