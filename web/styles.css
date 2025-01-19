@@ -11,3 +11,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Body and global settings */
+body {
+    font-family: 'vazir';
+    background-color: #121212;  /* Dark background for the body */
+    color: #e1e1e1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
