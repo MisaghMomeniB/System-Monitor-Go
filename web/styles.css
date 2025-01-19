@@ -105,3 +105,38 @@ body {
     font-size: 18px;
     color: #bbb;
 }
+
+/* Container for the stats cards */
+.stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-top: 90px;
+}
+
+@media (max-width: 1024px) {
+    .stats-container {
+        grid-template-columns: 1fr 1fr; /* Stack cards on medium screens (tablets) */
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-container {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens (phones) */
+        margin-top: 60px;
+    }
+
+    .top-nav {
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-nav .logo {
+        font-size: 20px;
+    }
+
+    .top-nav .user-info {
+        font-size: 14px;
+    }
+}
