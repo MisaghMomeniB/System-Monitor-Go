@@ -75,3 +75,33 @@ body {
     margin-left: 5px;
     color: #ff5722;
 }
+
+/* Card-like stat boxes */
+.card {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    background-color: #353535;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 22px;
+    color: #ddd;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.card p {
+    font-size: 18px;
+    color: #bbb;
+}
