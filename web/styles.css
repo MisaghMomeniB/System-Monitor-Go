@@ -21,3 +21,14 @@ body {
     flex-direction: column;
     height: 100vh;
 }
+
+/* Main content area */
+.main-content {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #1f1f1f;
+    overflow-y: auto;
+    margin-top: 50px;  /* Space for the top nav */
+    animation: fadeIn 1s ease-out;
+}
