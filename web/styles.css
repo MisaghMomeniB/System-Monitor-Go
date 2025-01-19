@@ -51,3 +51,14 @@ body {
     margin: 0; /* Make sure there's no margin */
     padding-left: 0; /* Remove any extra padding from the left side */
 }
+
+/* Adjust the layout of the top nav on smaller screens */
+.top-nav .logo {
+    cursor: default;
+    padding-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-right: auto;  /* Move the logo to the left */
+}
