@@ -172,3 +172,29 @@ body {
     gap: 15px;
     flex-wrap: wrap;
 }
+
+.system-monitor .stats .stat {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 15px;
+    width: 30%;  /* Each stat takes up 30% of the width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.system-monitor .stats .stat:hover {
+    background-color: #353535;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.system-monitor .stats .stat h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.system-monitor .stats .stat p {
+    font-size: 16px;
+    color: #bbb;
+}   
