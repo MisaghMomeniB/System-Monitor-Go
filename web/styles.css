@@ -164,3 +164,11 @@ body {
     margin-bottom: 20px;
     font-weight: 600;
 }
+
+/* Adjusting the appearance of stats (CPU, Memory, Disk) inside the system monitor */
+.system-monitor .stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
