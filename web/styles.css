@@ -140,3 +140,19 @@ body {
         font-size: 14px;
     }
 }
+
+/* System Monitor section */
+.system-monitor {
+    background-color: #1e1e1e;  /* Dark background */
+    padding: 30px;  /* Adding padding to create space inside the box */
+    border-radius: 10px;  /* Round corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);  /* Add shadow for depth */
+    margin-top: 20px;  /* Space from the top */
+    margin-bottom: 20px; /* Space at the bottom */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.system-monitor:hover {
+    background-color: #333333;  /* Darken background on hover */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);  /* Enhanced shadow on hover */
+}
