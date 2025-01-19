@@ -62,3 +62,16 @@ body {
     letter-spacing: 2px;
     margin-right: auto;  /* Move the logo to the left */
 }
+
+.top-nav .user-info {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align the user info on the right */
+}
+
+.top-nav .user-info span {
+    font-weight: bold;
+    margin-left: 5px;
+    color: #ff5722;
+}
