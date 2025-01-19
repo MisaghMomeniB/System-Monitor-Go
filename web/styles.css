@@ -32,3 +32,22 @@ body {
     margin-top: 50px;  /* Space for the top nav */
     animation: fadeIn 1s ease-out;
 }
+
+/* Top navigation bar */
+.top-nav {
+    background-color: #2b2b2b;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0; /* Ensure it's aligned to the left edge */
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    margin: 0; /* Make sure there's no margin */
+    padding-left: 0; /* Remove any extra padding from the left side */
+}
