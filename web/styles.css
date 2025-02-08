@@ -1,239 +1,258 @@
-/* Font */
+/* Define custom font */
 @font-face {
-    font-family: 'Vazir';
-    src: url('./fonts/ttf/Vazirmatn-Bold.ttf') format('truetype');
+    font-family: 'Vazir'; /* Font name */
+    src: url('./fonts/ttf/Vazirmatn-Bold.ttf') format('truetype'); /* Font file location */
 }
 
-/* Reset styles */
+/* Reset default styles for all elements */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default paddings */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
-/* Body and global settings */
+/* General body settings */
 body {
-    font-family: 'Vazir', sans-serif;
-    background: linear-gradient(135deg, #121212, #3a3a3a);
-    color: #e1e1e1;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
+    font-family: 'Vazir', sans-serif; /* Set primary font and fallback font */
+    background: linear-gradient(135deg, #121212, #3a3a3a); /* Background gradient */
+    color: #e1e1e1; /* Text color */
+    display: flex; /* Use Flexbox layout */
+    flex-direction: column; /* Arrange child elements vertically */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Disable scrolling */
 }
 
-/* Main content area */
+/* Main content area styling */
 .main-content {
-    padding: 20px;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
-    overflow-y: auto;
-    margin-top: 50px;
-    animation: fadeIn 1s ease-out;
+    padding: 20px; /* Inner spacing */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: linear-gradient(135deg, #1f1f1f, #2c2c2c); /* Background gradient */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    margin-top: 50px; /* Top margin */
+    animation: fadeIn 1s ease-out; /* Apply fade-in animation */
 }
 
-/* Top navigation bar */
+/* Top navigation bar styling */
 .top-nav {
-    background: linear-gradient(90deg, #2b2b2b, #424242);
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    transition: all 0.3s ease-in-out;
+    background: linear-gradient(90deg, #2b2b2b, #424242); /* Background gradient */
+    padding: 15px; /* Inner spacing */
+    display: flex; /* Use Flexbox layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Vertically center items */
+    color: #fff; /* Text color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    position: fixed; /* Fix the navbar at the top */
+    width: 100%; /* Full width */
+    top: 0; /* Positioned at the top of the page */
+    left: 0; /* Positioned at the left edge of the page */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    transition: all 0.3s ease-in-out; /* Smooth transitions */
 }
 
+/* Hover effect for the top navigation bar */
 .top-nav:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Increase shadow intensity */
+    transform: translateY(-2px); /* Slightly lift the navbar */
 }
 
+/* Logo styling in the top navigation bar */
 .top-nav .logo {
-    cursor: default;
-    padding-left: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #ff5722;
-    letter-spacing: 2px;
-    margin-right: auto;
+    cursor: default; /* Default cursor type */
+    padding-left: 20px; /* Left padding */
+    font-size: 24px; /* Font size */
+    font-weight: bold; /* Bold font weight */
+    color: #ff5722; /* Text color */
+    letter-spacing: 2px; /* Letter spacing */
+    margin-right: auto; /* Push the logo to the left */
 }
 
+/* User information section in the top navigation bar */
 .top-nav .user-info {
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    font-size: 16px; /* Font size */
+    display: flex; /* Use Flexbox layout */
+    align-items: center; /* Vertically center items */
+    justify-content: flex-end; /* Align items to the right */
 }
 
+/* User information text styling */
 .top-nav .user-info span {
-    font-weight: bold;
-    margin-left: 5px;
-    color: #4caf50;
+    font-weight: bold; /* Bold font weight */
+    margin-left: 5px; /* Left margin */
+    color: #4caf50; /* Text color */
 }
 
-/* Card-like stat boxes */
+/* Card-like stat boxes styling */
 .card {
-    background: linear-gradient(135deg, #2c2c2c, #3a3a3a);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
+    background: linear-gradient(135deg, #2c2c2c, #3a3a3a); /* Background gradient */
+    padding: 20px; /* Inner spacing */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    transition: all 0.3s ease-in-out; /* Smooth transitions */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: relative; /* Relative positioning */
+    overflow: hidden; /* Hide overflowing content */
 }
 
+/* Hover effect for card-like stat boxes */
 .card:hover {
-    background: linear-gradient(135deg, #353535, #424242);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    transform: translateY(-5px);
+    background: linear-gradient(135deg, #353535, #424242); /* Change background gradient */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Increase shadow intensity */
+    transform: translateY(-5px); /* Lift the card slightly */
 }
 
+/* Card title styling */
 .card h3 {
-    font-size: 22px;
-    color: #ddd;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
+    font-size: 22px; /* Font size */
+    color: #ddd; /* Text color */
+    margin-bottom: 10px; /* Bottom margin */
+    letter-spacing: 1px; /* Letter spacing */
 }
 
+/* Card content styling */
 .card p {
-    font-size: 18px;
-    color: #bbb;
+    font-size: 18px; /* Font size */
+    color: #bbb; /* Text color */
 }
 
 /* Container for the stats cards */
 .stats-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 90px;
+    display: grid; /* Use CSS Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Gap between columns */
+    margin-top: 90px; /* Top margin */
 }
 
-/* System Monitor section */
+/* System monitor section styling */
 .system-monitor {
-    background: linear-gradient(135deg, #1e1e1e, #333333);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    transition: all 0.3s ease-in-out;
+    background: linear-gradient(135deg, #1e1e1e, #333333); /* Background gradient */
+    padding: 30px; /* Inner spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Shadow effect */
+    margin-top: 20px; /* Top margin */
+    margin-bottom: 20px; /* Bottom margin */
+    transition: all 0.3s ease-in-out; /* Smooth transitions */
 }
 
+/* Hover effect for the system monitor section */
 .system-monitor:hover {
-    background: linear-gradient(135deg, #333333, #424242);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(135deg, #333333, #424242); /* Change background gradient */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6); /* Increase shadow intensity */
 }
 
+/* System monitor title styling */
 .system-monitor h2 {
-    font-size: 26px;
-    color: #ffffff;
-    margin-bottom: 20px;
-    font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 26px; /* Font size */
+    color: #ffffff; /* Text color */
+    margin-bottom: 20px; /* Bottom margin */
+    font-weight: 600; /* Font weight */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
 }
 
+/* Stats container inside the system monitor */
 .system-monitor .stats {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    flex-wrap: wrap;
+    display: flex; /* Use Flexbox layout */
+    justify-content: space-between; /* Space between items */
+    gap: 15px; /* Gap between items */
+    flex-wrap: wrap; /* Wrap items if necessary */
 }
 
+/* Individual stat item styling */
 .system-monitor .stats .stat {
-    background: linear-gradient(135deg, #2a2a2a, #3a3a3a);
-    border-radius: 10px;
-    padding: 15px;
-    width: calc(33.33% - 15px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #2a2a2a, #3a3a3a); /* Background gradient */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Inner spacing */
+    width: calc(33.33% - 15px); /* Calculate width dynamically */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    text-align: center; /* Center-align text */
+    transition: all 0.3s ease; /* Smooth transitions */
 }
 
+/* Hover effect for individual stat items */
 .system-monitor .stats .stat:hover {
-    background: linear-gradient(135deg, #353535, #424242);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #353535, #424242); /* Change background gradient */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Increase shadow intensity */
+    transform: scale(1.05); /* Slightly enlarge the item */
 }
 
+/* Title of individual stat items */
 .system-monitor .stats .stat h3 {
-    font-size: 20px;
-    color: #fff;
-    margin-bottom: 10px;
+    font-size: 20px; /* Font size */
+    color: #fff; /* Text color */
+    margin-bottom: 10px; /* Bottom margin */
 }
 
+/* Content of individual stat items */
 .system-monitor .stats .stat p {
-    font-size: 16px;
-    color: #bbb;
+    font-size: 16px; /* Font size */
+    color: #bbb; /* Text color */
 }
 
-/* Chart container */
+/* Chart container styling */
 .chart-container {
-    margin-top: 30px;
-    background: linear-gradient(135deg, #2c2c2c, #3a3a3a);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    transition: all 0.3s ease-in-out;
+    margin-top: 30px; /* Top margin */
+    background: linear-gradient(135deg, #2c2c2c, #3a3a3a); /* Background gradient */
+    padding: 20px; /* Inner spacing */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    display: flex; /* Use Flexbox layout */
+    justify-content: space-between; /* Space between items */
+    gap: 20px; /* Gap between items */
+    flex-wrap: wrap; /* Wrap items if necessary */
+    transition: all 0.3s ease-in-out; /* Smooth transitions */
 }
 
+/* Hover effect for the chart container */
 .chart-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px); /* Lift the container slightly */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Increase shadow intensity */
 }
 
+/* Canvas (chart) styling */
 canvas {
-    width: 100%;
-    max-width: 400px;
-    height: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+    width: 100%; /* Full width */
+    max-width: 400px; /* Maximum width */
+    height: 300px; /* Fixed height */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    transition: all 0.3s ease; /* Smooth transitions */
 }
 
+/* Hover effect for canvas (chart) */
 canvas:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05); /* Slightly enlarge the chart */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Increase shadow intensity */
 }
 
-/* Animations */
+/* Fade-in animation */
 @keyframes fadeIn {
     0% {
-        opacity: 0;
-        transform: translateY(50px);
+        opacity: 0; /* Fully transparent */
+        transform: translateY(50px); /* Start from below */
     }
     100% {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1; /* Fully opaque */
+        transform: translateY(0); /* Move to final position */
     }
 }
 
+/* Pulse animation */
 @keyframes pulse {
     0% {
-        transform: scale(1);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: scale(1); /* Original size */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Original shadow */
     }
     50% {
-        transform: scale(1.05);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        transform: scale(1.05); /* Slightly enlarged */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Increased shadow */
     }
     100% {
-        transform: scale(1);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: scale(1); /* Return to original size */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Return to original shadow */
     }
 }
 
+/* Apply pulse animation on card hover */
 .card:hover {
-    animation: pulse 1.5s infinite;
+    animation: pulse 1.5s infinite; /* Infinite pulse animation */
 }
